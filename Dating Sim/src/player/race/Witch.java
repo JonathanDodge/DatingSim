@@ -7,6 +7,6 @@ public class Witch extends Race
 {
     public Witch()
     {
-        super (0,10,10,10,10,7,0,0,0,23);
+        super (0,10,10,10,10,7,0,0,0);
     }
 }

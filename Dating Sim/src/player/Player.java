@@ -13,6 +13,7 @@ public class Player
     protected Job job;
     protected int currentChips;
     protected int currentCeptums;
+    //Create array for story progression
 
 
     public String getName()

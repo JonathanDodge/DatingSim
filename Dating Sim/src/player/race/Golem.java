@@ -7,6 +7,6 @@ public class Golem extends Race
 {
     public Golem()
     {
-        super (30,0,5,0,0,0,0,0,30,5);
+        super (30,0,5,0,0,0,0,0,30);
     }
 }

@@ -7,6 +7,6 @@ public class Alien extends Race
 {
     public Alien()
     {
-        super (12,18,10,10,10,10,0,0,0,0);
+        super (12,18,10,10,10,10,0,0,0);
     }
 }

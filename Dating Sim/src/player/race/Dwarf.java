@@ -7,6 +7,6 @@ public class Dwarf extends Race
 {
     public Dwarf()
     {
-        super (20,8,9,7,8,10,0,0,0,8);
+        super (20,8,9,7,8,10,0,0,0);
     }
 }

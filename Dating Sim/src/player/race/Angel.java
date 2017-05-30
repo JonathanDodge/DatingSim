@@ -7,6 +7,6 @@ public class Angel extends Race
 {
     public Angel()
     {
-        super (5,20,0,3,30,7,0,0,0,5);
+        super (5,20,0,3,30,7,0,0,0);
     }
 }

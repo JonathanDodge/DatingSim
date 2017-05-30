@@ -7,6 +7,6 @@ public class Demon extends Race
 {
     public Demon()
     {
-        super (15,5,30,0,0,5,0,0,0,15);
+        super (15,5,30,0,0,5,0,0,0);
     }
 }

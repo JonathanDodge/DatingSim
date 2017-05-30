@@ -86,9 +86,9 @@ public class OpeningAnimationState extends State{
 	}
 	
 	public void tick() {
-		if(handler.getMouseManager().isLeftPressed()){
-			State.setState(handler.getGame().menuState);
-		}
+		//if(handler.getMouseManager().isLeftPressed()){
+		//	State.setState(handler.getGame().menuState);
+		//}
 		
 		timer += System.currentTimeMillis() - lastTime;
 		lastTime = System.currentTimeMillis();

@@ -8,8 +8,6 @@ import java.awt.image.BufferedImage;
 
 public class Game implements Runnable{
 	
-	private Display display;
-	
 	public String title;
 	private int width, height;
 	public boolean running;
@@ -19,7 +17,6 @@ public class Game implements Runnable{
 	private BufferStrategy bs;
 	private Graphics g;
 	private KeyManager keyManager;
-	private MouseManager mouseManager;
 	private Handler handler;
 	
 	//States
@@ -27,33 +24,23 @@ public class Game implements Runnable{
 	public State menuState;
 	public State saveSelectionState;
 	public State OpeningAnimation;
-	public State PauseState;
+	public State devState;
 	
 	public Game(String title, int width, int height){
 		this.width = width;
 		this.height = height;
 		this.title = title;
 		keyManager = new KeyManager();
-		mouseManager = new MouseManager();
 	}
 	
 	private void init(){
-		display = new Display(title, width, height);
-		display.getFrame().addKeyListener(keyManager);
-		display.getFrame().addMouseListener(mouseManager);
-		display.getFrame().addMouseMotionListener(mouseManager);
-		display.getCanvas().addMouseListener(mouseManager);
-		display.getCanvas().addMouseMotionListener(mouseManager);
-		
-		Assets.init();
-		
 		handler = new Handler(this);
-		
-		gameState = new GameState(handler);
+
+		devState = new DevState(handler);
+		//gameState = new GameState(handler);
 		menuState = new MenuState(handler);
-		saveSelectionState = new SaveSelectionState(handler);
+		//saveSelectionState = new SaveSelectionState(handler);
 		OpeningAnimation = new OpeningAnimationState(handler);
-		PauseState = new PauseState(handler);
 		State.setState(OpeningAnimation);
 	}
 	
@@ -68,24 +55,7 @@ public class Game implements Runnable{
 	}
 	
 	private void render(){
-		bs = display.getCanvas().getBufferStrategy();
-		if(bs == null){
-			display.getCanvas().createBufferStrategy(3);
-			return;
-		}
-		g = bs.getDrawGraphics();
-		//Clear Screen
-		g.clearRect(0, 0, width, height);
-		//Draw Here!
-		
-		g.fillRect(0, 0, width, height);
-		if(State.getState() != null){
-			State.getState().render(g);
-		}
-		
-		//End Drawing
-		bs.show();
-		g.dispose();
+
 	}
 	
 	public void run(){
@@ -108,7 +78,7 @@ public class Game implements Runnable{
 			
 			if(delta >= 1){
 				tick();
-				render();
+				//render();
 				ticks++;
 				delta--;
 			}
@@ -126,10 +96,6 @@ public class Game implements Runnable{
 	
 	public KeyManager getKeyManager(){
 		return keyManager;
-	}
-	
-	public MouseManager getMouseManager(){
-		return mouseManager;
 	}
 
 	public synchronized void start(){

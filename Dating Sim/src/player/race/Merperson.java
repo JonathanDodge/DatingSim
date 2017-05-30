@@ -7,6 +7,6 @@ public class Merperson extends Race
 {
     public Merperson()
     {
-        super (9,10,3,10,15,9,0,0,0,14);
+        super (9,10,3,10,15,9,0,0,0);
     }
 }

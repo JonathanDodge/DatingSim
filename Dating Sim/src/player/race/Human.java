@@ -7,6 +7,6 @@ public class Human extends Race
 {
     public Human()
     {
-        super (10, 15, 20, 5 ,10 ,10 ,0 ,0 ,0 ,0 );
+        super (10, 15, 20, 5 ,10 ,10 ,0 ,0 ,0);
     }
 }

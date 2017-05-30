@@ -7,6 +7,6 @@ public class Centaur extends Race
 {
     public Centaur()
     {
-        super (10,10,15,10,10,15,0,0,0,0);
+        super (10,10,15,10,10,15,0,0,0);
     }
 }

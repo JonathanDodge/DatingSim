@@ -7,6 +7,6 @@ public class Cyborg extends Race
 {
     public Cyborg()
     {
-        super (15,15,2,10,13,15,0,0,0,0);
+        super (15,15,2,10,13,15,0,0,0);
     }
 }

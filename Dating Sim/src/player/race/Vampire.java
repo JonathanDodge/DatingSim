@@ -7,6 +7,6 @@ public class Vampire extends Race
 {
     public Vampire()
     {
-        super (15,5,15,15,10,5,0,0,0,5);
+        super (15,5,15,15,10,5,0,0,0);
     }
 }

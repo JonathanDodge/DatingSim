@@ -7,6 +7,6 @@ public class Elf extends Race
 {
     public Elf()
     {
-        super (5,17,5,13,10,15,0,0,0,5);
+        super (5,17,5,13,10,15,0,0,0);
     }
 }

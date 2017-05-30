@@ -7,6 +7,6 @@ public class Naga extends Race
 {
     public Naga()
     {
-        super (5,10,10,17,5,18,0,0,0,5);
+        super (5,10,10,17,5,18,0,0,0);
     }
 }
